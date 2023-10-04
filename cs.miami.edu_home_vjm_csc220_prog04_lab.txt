@@ -1,0 +1,90 @@
+0. In IntelliJ, create a prog04 package.  Download StackInterface and
+   review it.
+
+
+1. Download and finish implementing ArrayStack.java.
+
+   For pop, do the opposite of push.  Notice the exception check.
+
+   Copy the the other missing methods from StackInterface, including
+   their javadoc and fill them in.  Download StackTester (to
+   src/prog04 not test/prog04).  Test your implementation of
+   StackInterface using StackTester.  Because there is no reallocation
+   (homework), it will crash if you push too many items.
+
+   Don't forget to test popping and peeking an empty stack.
+
+
+2. Download LinkedStack.java.  Copy all the missing methods from
+   StackInterface (including javadoc) and finish implementing
+   LinkedStack.java, an implementation of StackInterface using a
+   linked list.  Modify StackTester to test it.
+
+
+3. Download Game.java.  Finish the constructor of Game: push nDisks
+   disks (integers) on pegs[0] with nDisks on the bottom and 1 on the
+   top.
+
+
+4. In play(), put in the correct while-condition which is true if the
+   player is not finished and false if the player has successfully moved
+   all the disks to peg 'c' (pegs[2]).
+
+
+5. Finish stackToString.
+
+
+6. Implement move.  First make the move without checking.  Test and
+   play, being careful not to make an illegal move.  Then implement
+   checking for illegal moves.
+
+
+7. Test and play.
+
+
+HOMEWORK DUE WEDNESDAY AT 9AM
+
+8. Add reallocate to ArrayStack and call it from push when it is
+   needed.  Test using ArrayStackTest in test/prog04.
+
+
+9. Rightclick on LinkedStack in LinkedStack.java --> Generate... --> Test...
+   Generate a test for push (it will test everything).
+   Do the same things as in ArrayStackTest.  Test LinkedStack.
+
+
+10. Finish implementing ListStack.java, an implementation of StackInterface
+    using a java.util.List.  Test it (how???).
+
+
+11. Inside the Game class (not in a separate file), create a Goal
+    class with int fromPeg and toPeg (which will be 0, 1, or 2) and
+    int nMove.
+
+    Create public String toString () in Goal.  If fromPeg=2, toPeg=1,
+    and nMove=4 it should return
+
+"Move 4 disks from peg c to peg b."
+
+
+12. Create a method to display the contents of a stack of Goal objects
+    separate by newlines.  To add a newline to s:
+
+	s = s + "\n";
+
+   It should send a message like
+
+Move 2 disks from peg a to peg b.
+Move 1 disk from peg a to peg c.
+Move 2 disks from peg b to peg c.
+Move 1 disk from peg a to peg b.
+Move 3 disks from peg c to peg b.
+Move 1 disk from peg a to peg c.
+Move 4 disks from peg b to peg c.
+
+   where the first line is the top of the stack.
+
+
+13. Implement solve.  It should call displayPegs() at the beginning
+    and after it makes each move.  It should display the Goal stack
+    just before it pops the next Goal.
